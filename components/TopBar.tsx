@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FileText } from 'lucide-react';
 
 interface TopBarProps {
@@ -17,8 +18,10 @@ export default function TopBar({ manualCount }: TopBarProps) {
           Product manual assistant
         </span>
       </div>
-      <div
-        className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px]"
+      <Link
+        href="/manuals"
+        title="View indexed manuals"
+        className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] transition-colors hover:opacity-100"
         style={{
           background: 'rgba(255,255,255,0.08)',
           color: 'var(--bruno-blue-muted)',
@@ -26,7 +29,7 @@ export default function TopBar({ manualCount }: TopBarProps) {
       >
         <FileText size={11} />
         <span>{manualCount} manuals indexed</span>
-      </div>
+      </Link>
     </header>
   );
 }
