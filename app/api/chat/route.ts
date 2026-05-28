@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic';
 
 const MODEL = 'claude-sonnet-4-5';
 const MAX_TOKENS = 1024;
-const TOP_K = 7;
+const TOP_K = 8;
 
 export async function POST(req: Request) {
   const body = (await req.json()) as {

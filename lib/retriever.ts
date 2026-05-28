@@ -8,7 +8,7 @@ export interface RetrievedChunk extends Source {
 
 export async function retrieveChunks(
   embedding: number[],
-  count = 5,
+  count = 8,
   category?: string | null,
 ): Promise<RetrievedChunk[]> {
   const { data, error } = await getSupabaseAdmin().rpc('match_bruno_chunks', {
