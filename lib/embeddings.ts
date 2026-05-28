@@ -14,10 +14,16 @@ function client(): OpenAI {
 }
 
 export async function embedQuery(text: string): Promise<number[]> {
+  console.log('[embeddings] creating embedding for query:', text.slice(0, 50));
+
   const response = await client().embeddings.create({
     model: EMBEDDING_MODEL,
     input: text,
   });
+
+  console.log('[embeddings] model used:', response.model);
+  console.log('[embeddings] dims:', response.data[0].embedding.length);
+
   return response.data[0].embedding;
 }
 
