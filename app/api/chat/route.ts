@@ -20,11 +20,29 @@ export async function POST(req: Request) {
 
   const userMessage = messages[messages.length - 1]?.content?.trim();
   if (!userMessage) {
+    console.log('[chat] rejected request — no user message');
     return new Response('Missing user message', { status: 400 });
   }
 
+  console.log('[chat] request', {
+    userMessage: userMessage.slice(0, 120),
+    category,
+    historyTurns: messages.length,
+  });
+
   const queryEmbedding = await embedQuery(userMessage);
+  console.log('[chat] embedding ready', { dims: queryEmbedding.length });
+
   const chunks = await retrieveChunks(queryEmbedding, TOP_K, category);
+
+  console.log('[chat] retrieval summary', {
+    chunkCount: chunks.length,
+    topModels: chunks.slice(0, 3).map((c) => ({
+      model: c.model,
+      page: c.page_number,
+      sim: c.similarity,
+    })),
+  });
 
   const context = chunks.length
     ? chunks
