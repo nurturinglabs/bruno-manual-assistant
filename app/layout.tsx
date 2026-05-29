@@ -14,9 +14,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Bruno Product Manual Assistant",
+  title: "Bruno AI Product Support Agent",
   description:
-    "Ask questions about Bruno Independent Living Aids products. Answers are grounded in the official owner manuals with page-level citations.",
+    "Ask questions about Bruno Independent Living Aids products. Answers grounded in official owner manuals with page-level citations.",
 };
 
 export default function RootLayout({

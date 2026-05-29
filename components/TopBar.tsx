@@ -15,7 +15,7 @@ export default function TopBar({ manualCount }: TopBarProps) {
         <span className="text-base font-semibold tracking-wide">BRUNO®</span>
         <span className="opacity-40">|</span>
         <span className="text-[13px]" style={{ color: 'var(--bruno-blue-muted)' }}>
-          Product manual assistant
+          AI Product Support Agent
         </span>
       </div>
       <Link

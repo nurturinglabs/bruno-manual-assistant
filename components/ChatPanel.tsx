@@ -91,7 +91,7 @@ function WelcomeCard() {
   return (
     <div className="max-w-2xl mx-auto pt-6 pb-4">
       <h1 className="text-[22px] font-semibold mb-1" style={{ color: 'var(--bruno-navy)' }}>
-        Bruno product manual assistant
+        Bruno AI Product Support Agent
       </h1>
       <p className="text-[14px] text-muted leading-relaxed">
         Ask a question and I&apos;ll pull the answer straight from the indexed owner manuals,
