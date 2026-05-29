@@ -5,10 +5,14 @@ interface SuggestedQuestionsProps {
 }
 
 const SUGGESTIONS = [
-  'How do I use the seat swivel on a Bruno stair lift?',
-  'How do I load my scooter onto the PUL-1100?',
-  'What is the recommended tire pressure for the ASL-700?',
-  'What does the Bruno warranty cover?',
+  'My SRE-3050 stops mid-stair and beeps once. What should I check?',
+  'What is the maximum weight capacity of the SRE-2010?',
+  'How do I fold down the rail on the SRE-3050?',
+  'How do I operate the ASL-275 in an emergency?',
+  'What maintenance does the VPL-3100 require?',
+  'How do I reset the circuit breaker on a stair lift?',
+  'What is the warranty period on Bruno stair lifts?',
+  'What does error code C5 mean on the SRE-2010?',
 ];
 
 export default function SuggestedQuestions({ onSelect }: SuggestedQuestionsProps) {
